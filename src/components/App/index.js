@@ -52,14 +52,14 @@ function App() {
 
   return (
     <Container>
-      <TodoForm createTodo={createTodo} />
       <Box
         my={20}
         display="flex"
         justifyContent="center"
         alignItems="center"
-        flexDirection="row"
+        flexDirection="column"
       >
+        <TodoForm createTodo={createTodo} />
         <List>
           {visibleTodos.map(todo => (
             <TodoItem

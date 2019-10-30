@@ -1,13 +1,5 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Container,
-  List,
-  ListItem,
-  ListItemText,
-  TextField,
-  makeStyles
-} from "@material-ui/core";
+import React from "react";
+import { ListItem, ListItemText, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   completed: {
