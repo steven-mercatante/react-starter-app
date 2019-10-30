@@ -7,6 +7,8 @@ function App() {
   /**
    * Using hardcoded data for demo purposes. Normally this would be stored
    * in a database or even local storage, depending on the needs.
+   *
+   * We'd fetch the todos from the external data store using `useEffect`
    */
   const [todos, setTodos] = useState([
     {
@@ -50,6 +52,7 @@ function App() {
 
   return (
     <Container>
+      <TodoForm createTodo={createTodo} />
       <Box
         my={20}
         display="flex"
@@ -57,7 +60,6 @@ function App() {
         alignItems="center"
         flexDirection="row"
       >
-        <TodoForm createTodo={createTodo} />
         <List>
           {visibleTodos.map(todo => (
             <TodoItem
