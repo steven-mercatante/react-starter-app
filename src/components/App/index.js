@@ -42,6 +42,12 @@ function App() {
     );
   }
 
+  /**
+   * Use a copy of `todos` that we can reverse without potentially
+   * messing up id generation based on array indices.
+   */
+  const visibleTodos = [...todos].reverse();
+
   return (
     <Container>
       <Box
@@ -53,7 +59,7 @@ function App() {
       >
         <TodoForm createTodo={createTodo} />
         <List>
-          {todos.map(todo => (
+          {visibleTodos.map(todo => (
             <TodoItem
               id={todo.id}
               task={todo.task}
